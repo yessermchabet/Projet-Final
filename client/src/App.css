@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #c4c3ca;
+	background-color: #2A2A2A;
+	overflow-x: hidden;
+}
+a {
+	cursor: pointer;
+  transition: all 200ms linear;
+}
+a:hover {
+	text-decoration: none;
+}
+.link {
+  color: #c4c3ca;
+}
+.link:hover {
+  color: #F4C432;
+}
+p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+}
+h4 {
+  font-weight: 600;
+}
+h6 span{
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.full-height{
+  min-height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #F4C432;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #F4C432;
+  background-color: #102770;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+
+.x-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.x-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position:absolute;    
+  top: 0;
+  left: 0;  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
+}
+.x-front, .x-back {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.x-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .x-3d-wrap .x-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+
+
+.form-group{ 
+  position: relative;
+  display: block;
+    margin: 0;
+    padding: 0;
+}
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  color: #F4C432;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:-ms-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-webkit-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-ms-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-webkit-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.btn{  
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #F4C432;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+}
+.btn:active,
+.btn:focus{  
+  background-color: #102770;
+  color: #F4C432;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.btn:hover{  
+  background-color: white;
+  color: #F4C432;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+
+
+
+
+.logo {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: block;
+	z-index: 100;
+	transition: all 250ms linear;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+}
+
+
+.linkNav{
+  font-weight: bold;
+    justify-content: space-around;
+  
+    align-items: center;
+    display: flex
+;
+    border: 3px black solid;
+    color: black;
+    margin-left: 10px;
+}
+
+#basic-nav-dropdown{
+  color: black;
+}
+
+
+.new-car-container {
+  padding: 40px 0;
+}
+
+.x {
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-animated {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-animated:hover {
+  transform: translateY(-3px);
+  background-color: #0056b3;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.table-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.styled-table thead {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+/* Bouton Accept */
+.accept {
+  border-color: green;
+  color: green;
+}
+
+.accept:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Bouton Reject */
+.reject {
+  border-color: red;
+  color: red;
+}
+
+.reject:hover {
+  background-color: red;
+  color: white;
+}
+
+
+/* Conteneur de la carte */
+.user-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de l'utilisateur */
+.user-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Nom de l'utilisateur */
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Email de l'utilisateur */
+.user-email {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Bouton Supprimer */
+.delete-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+
+/* Style général du bouton */
+.delete-btn {
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Effet au survol */
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Effet lors du clic */
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Animation au chargement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delete-btn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* Conteneur principal */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(135deg,black);
+  margin-top: -60px;
+}
+
+/* Carte du profil */
+.profile-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu (icône des trois barres) */
+.menu-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-icon {
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: black;
+}
+
+/* Image du profil */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  border: 5px solid #0d47a1;
+}
+
+/* Nom et email */
+.profile-name {
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+}
+
+.profile-email {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Section des compétences */
+.skills-section {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.skills-section h5 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: #e3f2fd;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu déroulant */
+.menu-item {
+  color: black !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #f1f1f1 !important;
+}
+
+.menu-item.delete {
+  color: red !important;
+}
+
+.menu-item.delete:hover {
+  background-color: rgba(255, 0, 0, 0.1) !important;
+}
+
+/* Message si aucun utilisateur */
+.no-user-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+}
+
+
+/* Style pour le formulaire de modification de profil */
+.edit-user-form {
+  max-width: 400px; /* Largeur maximale du formulaire */
+  margin: 50px auto; /* Centrer le formulaire */
+  padding: 20px; /* Espacement interne */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #ffffff; /* Fond blanc */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  transition: box-shadow 0.3s ease; /* Transition pour l'ombre */
+  margin-top: 100px;
+}
+
+.edit-user-form:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
+}
+
+/* Style des étiquettes */
+.edit-user-form .form-label {
+  font-weight: bold; /* Texte en gras */
+  color: #333; /* Couleur sombre */
+}
+
+/* Style des champs de formulaire */
+.edit-user-form .form-control {
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  transition: border-color 0.3s ease; /* Transition pour la bordure */
+}
+
+.edit-user-form .form-control:focus {
+  border-color: #007bff; /* Bordure bleue au focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre bleue au focus */
+}
+
+/* Style du bouton */
+.edit-user-form .btn-primary {
+  background-color: #F4C432; /* Couleur de fond */
+  border-color: #007bff; /* Couleur de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-weight: bold; /* Texte en gras */
+}
+
+.edit-user-form .btn-primary:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+  border-color: #0056b3; /* Couleur de bordure au survol */
+}
+
+/* Espacement entre les éléments du formulaire */
+.edit-user-form .mb-3 {
+  margin-bottom: 20px; /* Espacement entre les groupes de formulaire */
+}
+
+
+/* Style principal pour le conteneur de description de l'utilisateur */
+.user-description-container {
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  min-height: 100vh; /* Prend la hauteur de la fenêtre */
+  background-color: black; /* Couleur de fond claire */
+}
+
+/* Style pour la carte de l'utilisateur */
+.user-card {
+  width: 400px; /* Largeur de la carte */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'animation */
+  background-color: #fff; /* Couleur de fond blanche */
+}
+
+.user-card:hover {
+  transform: translateY(-5px); /* Effet de levée au survol */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
+}
+
+/* Style pour l'image de l'utilisateur */
+.user-image {
+  border-radius: 10px 10px 0 0; /* Coins arrondis pour le haut */
+  max-height: 200px; /* Hauteur maximale de l'image */
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* Style pour le nom de l'utilisateur */
+.user-name {
+  font-size: 1.5rem; /* Taille de police */
+  font-weight: bold; /* Texte en gras */
+  margin: 10px 0; /* Espacement vertical */
+  color: #333; /* Couleur sombre */
+}
+
+/* Style pour l'adresse email de l'utilisateur */
+.user-email {
+  font-size: 1rem; /* Taille de police */
+  color: #6c757d; /* Couleur grise */
+}
+
+/* Style pour le message "Mazel" */
+.no-user-message {
+  font-size: 1.5rem; /* Taille de police */
+  color: #dc3545; /* Couleur rouge */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles de base pour la navbar */
+.custom-navbar {
+  background: linear-gradient(135deg, #1e1e2f, #2c2c4a); /* Gradient moderne */
+  backdrop-filter: blur(20px); /* Effet de verre flouté */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile */
+  font-family: 'Poppins', sans-serif; /* Typographie moderne */
+}
+
+/* Logo de la navbar */
+.navbar-logo {
+  width: 150px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  filter: drop-shadow(0 0 10px rgba(244, 196, 50, 0.7)); /* Effet de lueur */
+}
+
+/* Liens de la navbar */
+.nav-link {
+  color: #fff !important;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f4c432 !important; /* Couleur d'accent au survol */
+  transform: translateY(-3px); /* Effet de déplacement */
+  text-shadow: 0 0 10px rgba(244, 196, 50, 0.7); /* Effet de lueur */
+}
+
+.nav-link:hover i {
+  transform: scale(1.2); /* Animation des icônes */
+}
+
+/* Chip du profil utilisateur */
+.profile-chip {
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.user-chip {
+  background: linear-gradient(135deg, #f4c432, #ff9a00); /* Gradient doré */
+  color: #1e1e2f;
+  font-weight: bold;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-chip:hover {
+  transform: scale(1.05); /* Effet de zoom */
+  box-shadow: 0 0 15px rgba(244, 196, 50, 0.7); /* Effet de lueur */
+}
+
+/* Menu déroulant des marques */
+.nav-dropdown .dropdown-menu {
+  background: rgba(30, 30, 47, 0.9); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Effet de verre flouté */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.nav-dropdown .dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-dropdown .dropdown-item:hover {
+  background-color: rgba(244, 196, 50, 0.1); /* Survol subtil */
+  transform: translateX(5px); /* Effet de déplacement */
+}
+
+/* Bouton de déconnexion */
+.logout-link {
+  cursor: pointer;
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.custom-navbar {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Mode sombre/clair dynamique */
+.custom-navbar.light {
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  color: #1e1e2f;
+}
+
+.custom-navbar.light .nav-link {
+  color: #1e1e2f !important;
+}
+
+.custom-navbar.light .nav-link:hover {
+  color: #f4c432 !important;
+}
+
+.custom-navbar.light .user-chip {
+  background: linear-gradient(135deg, #f4c432, #ff9a00);
+  color: #1e1e2f;
+}
+
+/* Effet de lueur pour les éléments interactifs */
+.glow-effect {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 15px rgba(244, 196, 50, 0.7);
+}
